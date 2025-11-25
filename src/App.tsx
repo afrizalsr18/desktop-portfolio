@@ -1,5 +1,9 @@
+import Navbar from '#components/Navbar'
+
 export const App = () => {
   return (
-    <h1 className='text-3xl font-bold underline'>ZAL OS</h1>
+    <main>
+      <Navbar />
+    </main>
   )
 }

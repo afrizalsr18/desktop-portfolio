@@ -1,9 +1,28 @@
 {
-    "compilerOptions" : {
+    "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "#*": ["*src/*"]
+            "#components/*": [
+                "src/components/*"
+            ],
+                "#constants": [
+                    "src/constants/index.ts"
+                ],
+                "#constants/*": [
+                    "src/constants/*"
+                ],
+            "#store/*": [
+                "src/store/*"
+            ],
+            "#hoc/*": [
+                "src/hoc/*"
+            ],
+            "#windows/*": [
+                "src/windows/*"
+            ]
         }
     },
-    "include" : ["src"]
+    "include": [
+        "src"
+    ]
 }
