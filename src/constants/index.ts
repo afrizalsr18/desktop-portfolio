@@ -470,7 +470,7 @@ const TRASH_LOCATION = {
     id: 4,
     type: "trash",
     name: "Trash",
-    icon: "/icons/user-trash.svg", // user-trash or user-trash-full
+    icon: "/icons/user-trash-full.svg", // user-trash or user-trash-full
     kind: "folder",
     children: [
         {
