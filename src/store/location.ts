@@ -4,16 +4,31 @@ import { locations } from "#constants"
 
 const DEFAULT_LOCATION = locations.work
 
-const useLocationStore = create(
+interface Location {
+    id: number;
+    type: string;
+    name: string;
+    icon: string;
+    kind: string;
+    children?: any[];
+}
+
+interface LocationStore {
+    activeLocation: Location;
+    setActiveLocation: (location: Location | null) => void;
+    resetActiveLocation: () => void;
+}
+
+const useLocationStore = create<LocationStore>()(
     immer((set) => ({
         activeLocation: DEFAULT_LOCATION,
 
         setActiveLocation: (location = null) =>
-            set((state) => {
-                state.activeLocation = location;
+            set((state: LocationStore) => {
+                state.activeLocation = location || DEFAULT_LOCATION;
             }),
 
-        resetActiveLocation: () => set((state) => {
+        resetActiveLocation: () => set((state: LocationStore) => {
             state.activeLocation = DEFAULT_LOCATION;
         })
     }))
