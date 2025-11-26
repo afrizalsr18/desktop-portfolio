@@ -1,4 +1,4 @@
-import { Navbar, Welcome, Dock } from '#components';
+import { Navbar, Dock } from '#components';
 import { Draggable } from 'gsap/Draggable';
 import gsap from 'gsap';
 import { Terminal, Browser, Resume, Finder, Space } from '#windows';

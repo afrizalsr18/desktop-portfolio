@@ -3,18 +3,24 @@ import { locations } from '#constants'
 import WindowWrapper from '#hoc/WindowWrapper'
 import useLocationStore from '#store/location'
 import clsx from 'clsx'
-import { Search, Wind } from 'lucide-react'
-import React from 'react'
+import { Search } from 'lucide-react'
+
+interface LocationItem {
+    id: number;
+    name: string;
+    icon: string;
+    [key: string]: any;
+}
 
 const Finder = () => {
     const { activeLocation, setActiveLocation } = useLocationStore()
 
-    const renderList = (name, items) => (
+    const renderList = (name: string, items: LocationItem[]) => (
         <div>
             <h3>{name}</h3>
 
             <ul>
-                {items.map((item) => (
+                {items.map((item: LocationItem) => (
                     <li key={item.id}
                         onClick={() => setActiveLocation(item)}
                         className={clsx(item.id === activeLocation.id ? 'active' : 'not-active'
