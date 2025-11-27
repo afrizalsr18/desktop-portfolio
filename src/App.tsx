@@ -14,7 +14,7 @@ export const App = () => {
       <Navbar darkMode={darkMode} />
       {/* <Welcome /> */}
       <Dock />
-
+      {/* <Home /> */}
       <Terminal />
       <Browser />
       <Resume />
@@ -23,6 +23,7 @@ export const App = () => {
       <Text />
       <Image />
       <Contact />
+
     </main>
   )
 }
