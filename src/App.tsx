@@ -1,4 +1,4 @@
-import { Navbar, Dock } from '#components';
+import { Navbar, Dock, Home } from '#components';
 import { Draggable } from 'gsap/Draggable';
 import gsap from 'gsap';
 import { Terminal, Browser, Resume, Finder, BugSquasher, Text, Image, Contact } from '#windows';
@@ -14,7 +14,7 @@ export const App = () => {
       <Navbar darkMode={darkMode} />
       {/* <Welcome /> */}
       <Dock />
-
+      <Home />
       <Terminal />
       <Browser />
       <Resume />
@@ -23,6 +23,7 @@ export const App = () => {
       <Text />
       <Image />
       <Contact />
+
     </main>
   )
 }
